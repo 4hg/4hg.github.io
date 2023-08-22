@@ -9,20 +9,22 @@
 }
 
 :root {
-    --color-bg: #282828;
-    --color-fg: #EADBB2;
-    --color-link: #CC7F66;
-    --color-link-visited: #668F8B;
-    --color-link-hover: #FA7921;
+  --header-bg: #282828;
+  --bg: #222121;
+  --fg: #EADBB2;
+  --link: #CC7F66;
+  /* --color-link-visited: #668F8B; */
+  --link-hover: #FA7921;
+
+  --main-font: 'BQN386 Unicode';
 }
 
-
 header {
-  background-color: #222121;
-  font-size: 30px;
+  background-color: var(--header-bg);
+  font-size: 20px;
   text-align: center;
   border-bottom: 1px solid;
-  padding: 20px 0 20px 0;
+  padding: 15px 0;
 }
 
 header>div {
@@ -32,13 +34,35 @@ header>div {
 }
 
 header a {
-  color: var(--color-link);
+  color: var(--link);
   text-decoration: none;
 }
 
-html, body {
+a {
+  color: var(--link);
+  display: contents underline;
+}
+
+a:hover, a.current { color: var(--link-hover); }
+
+/* html {
   background: var(--color-bg);
   color: var(--color-fg);
+  font-family: var(--main-font);
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
   font-family: "BQN386 Unicode";
   height: 100%;
   width: 100%;
@@ -51,9 +75,10 @@ html, body {
   flex-direction: column;
   align-items: center;
   font-size: 34px;
-  padding-top: 60px;
+  padding-left: 60px;
 }
 
+code, pre { color: #d1bc83; }
 code.literal { color: #97BEDC; }
 code.str { color: #E27373; }
 code.prompt { color: #E1C0FA; }
