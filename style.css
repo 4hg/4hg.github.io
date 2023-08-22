@@ -1,11 +1,3 @@
-:root {
-    --color-bg: #282828;
-    --color-fg: #EADBB2;
-    --color-link: #8F9191;
-    --color-link-visited: #668F8B;
-    --color-link-hover: #FA7921 ;
-}
-
 @font-face {
   font-family: 'BQN386 Unicode';
   src: url('./fonts/BQN386.woff2') format('woff2'),
@@ -14,6 +6,34 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+:root {
+    --color-bg: #282828;
+    --color-fg: #EADBB2;
+    --color-link: #CC7F66;
+    --color-link-visited: #668F8B;
+    --color-link-hover: #FA7921;
+}
+
+
+header {
+  background-color: #222121;
+  font-size: 30px;
+  text-align: center;
+  border-bottom: 1px solid;
+  padding: 20px 0 20px 0;
+}
+
+header>div {
+  display:inline-block;
+  width: 15%;
+  max-width: 160px;
+}
+
+header a {
+  color: var(--color-link);
+  text-decoration: none;
 }
 
 html, body {
@@ -26,10 +46,14 @@ html, body {
   padding: 0;
 }
 
-.head {
+.snippet {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 34px;
   padding-top: 60px;
 }
+
+code.literal { color: #97BEDC; }
+code.str { color: #E27373; }
+code.prompt { color: #E1C0FA; }
